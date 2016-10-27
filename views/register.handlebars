@@ -1,1 +1,34 @@
-REGISTRATION
+<h2>User Registration</h2>
+{{#if errors}}
+	{{#each errors}}
+		<div class="alert alert-danger">{{msg}}</div>
+	{{/each}}
+{{/if}}
+
+<form method="post" action="/users/register">
+	<div class="form-group">
+		<label>First Name</label>
+		<input type="text" name="first_name" class="form-control" placeholder="first name">
+	</div>
+	<div class="form-group">
+		<label>Last Name</label>
+		<input type="text" name="last_name" class="form-control" placeholder="last name">
+	</div>
+	<div class="form-group">
+		<label>Username</label>
+		<input type="text" name="username" class="form-control" placeholder="your login">
+	</div>
+	<div class="form-group">
+		<label>Email</label>
+		<input type="email" name="email" class="form-control" placeholder="your email">
+	</div>
+	<div class="form-group">
+		<label>Password</label>
+		<input type="password" name="password" class="form-control" placeholder="your password">
+	</div>
+	<div class="form-group">
+		<label>Confirm Password</label>
+		<input type="password" name="confirm_password" class="form-control" placeholder="your password again">
+	</div>
+	<button type="Submit" class="btn btn-default">Register</button>	
+</form>

@@ -19,6 +19,7 @@ console.log("You are successfully connected to " + db.name);
 // Routes
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var dashboard = require('./routes/dashboard');
 
 // Initialize App
 var app = express();
@@ -77,10 +78,7 @@ app.use(function (req, res, next) {
 //Mapping Routes
 app.use('/', routes);
 app.use('/users', users);
-
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+app.use('/dashboard', dashboard);
 
 var port = 3333;
 app.listen(port, function(){
