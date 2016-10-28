@@ -25,9 +25,13 @@
             <li><a href="#contact">Quests</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            {{#if user}}
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/users/logout">Logout</a></li>
+            {{else}}
             <li><a href="/users/login">Login</a></li>
             <li><a href="/users/register">Register</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
+            {{/if}}
           </ul>
         </div><!--/.nav-collapse -->
       </div>
